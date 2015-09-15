@@ -9,6 +9,14 @@ public class Triangle {
             return "Scalene Triangle";
         }
     }
+    
+    public String checkrTriangle(int len1, int len2, int len3){
+        if(Math.pow(len1,2) + Math.pow(len2,2) == Math.pow(len3,2)){
+            return "Right Triangle";
+        }else{
+            return "Not a right triangle";
+        }
+    }
 
     public static void main(String[] s){
 
@@ -19,8 +27,10 @@ public class Triangle {
 
         Triangle object = new Triangle();
         String triangleType = object.checkTriangle(length1, length2, length3);
+        String trianglerType = object.checkrTriangle(length1, length2, length3);
 
         System.out.println(triangleType);
+        System.out.println(trianglerType); 
     }
     
 }
