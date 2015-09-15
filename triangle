@@ -1,0 +1,26 @@
+public class Triangle {
+
+    public String checkTriangle(int len1, int len2, int len3){
+        if(len1 == len2 && len2 == len3){
+            return "Equilateral Triangle";    
+        }else if(len1==len2 || len2==len3 || len1==len3){
+            return "Isosceles Triangle";
+        }else{
+            return "Scalene Triangle";
+        }
+    }
+
+    public static void main(String[] s){
+
+        String[] triangleLengthArr = s[0].split(",");
+        int length1 = Integer.parseInt(triangleLengthArr[0]);
+        int length2 = Integer.parseInt(triangleLengthArr[1]);
+        int length3 = Integer.parseInt(triangleLengthArr[2]);
+
+        Triangle object = new Triangle();
+        String triangleType = object.checkTriangle(length1, length2, length3);
+
+        System.out.println(triangleType);
+    }
+    
+}
